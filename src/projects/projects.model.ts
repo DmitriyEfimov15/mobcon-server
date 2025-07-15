@@ -1,7 +1,12 @@
 import { AllowNull, BelongsTo, Column, DataType, Default, ForeignKey, Model, PrimaryKey, Table } from 'sequelize-typescript';
 import { Users } from 'src/user/user.model';
 
-interface ProjectsCreationAttr {}
+interface ProjectsCreationAttr {
+  name: string
+  description?: string
+  icon_url?: string | null
+  user_id: string
+}
 
 @Table({ tableName: 'projects' })
 export class Projects extends Model<Projects, ProjectsCreationAttr> {
@@ -13,6 +18,10 @@ export class Projects extends Model<Projects, ProjectsCreationAttr> {
   @AllowNull(false)
   @Column(DataType.STRING)
   name: string
+
+  @AllowNull(true)
+  @Column(DataType.STRING)
+  description: string
 
   @AllowNull(true)
   @Column(DataType.STRING)

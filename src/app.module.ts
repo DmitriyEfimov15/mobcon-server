@@ -20,7 +20,7 @@ import { CronModule } from './cron/cron.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: `.${process.env.MODE}.env`
+      envFilePath: `.${process.env.MODE}.env`,
     }),
     SequelizeModule.forRoot({
       dialect: 'postgres',
