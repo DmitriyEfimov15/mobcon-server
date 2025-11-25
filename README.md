@@ -58,7 +58,4 @@ MobCon — конструктор мобильных приложений на R
 npm install
 
 # Запуск в режиме разработки
-npm run dev
-
-# Сборка проекта
-npm run build
+npm run start:dev
