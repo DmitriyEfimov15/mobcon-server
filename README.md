@@ -1,4 +1,4 @@
-# MobCon Client
+# MobCon Server
 
 MobCon — конструктор мобильных приложений на React Native
 
